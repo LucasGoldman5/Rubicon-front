@@ -1,0 +1,12 @@
+.general-header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.li-header{
+    list-style: none;
+    margin: 10px;
+}
+.a-li-header{
+    text-decoration: none;
+}

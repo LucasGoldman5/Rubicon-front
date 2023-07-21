@@ -1,0 +1,14 @@
+
+<app-title [title]="title"></app-title>
+<div class="products-container" *ngIf="products">
+    <app-productsList *ngFor="let product of products" [product]="product"></app-productsList>
+</div>
+<ng-container *ngIf="productExist() == true">
+   <app-buttons-cart></app-buttons-cart> 
+</ng-container>
+<ng-container *ngIf="productExist() == false">
+    No hay Productos
+</ng-container>
+
+
+
