@@ -1,0 +1,7 @@
+<div class="cart-container">
+    <button class="button cart" (click)="viewCart()">Ver Carrito</button>
+    <button class="button confirmation">Confirmar Pedido</button>
+</div>
+<ng-container *ngIf="cartModalOpen == true">
+  <app-view-cart></app-view-cart>
+</ng-container>

@@ -1,0 +1,27 @@
+
+    <div class="card">
+        <div class="product-information">
+            <div>
+                <img [ngSrc]="product.images[0]" width="150" height="150" >
+            </div>
+            <div class="product-description">
+                <h3>{{product.title}}</h3>
+                <h4>{{product.description}}</h4>
+                <p>${{product.price}}</p>
+            </div>
+        </div>
+        <div class="product-actions">
+            <div class="number-product-container">
+                <label>Cantidad:</label>
+                <div class="number-product">
+                    <button *ngIf="quantity > 1" (click)="decreaseQuantity()">-</button>
+                    <input  type="text" [ngModel]="quantity" min="1" (change)="onInputChange($event)">
+                    <button (click)="increaseQuantity()">+</button>
+                </div>
+            </div>
+            <div class="button-add">
+                <button (click)="addToCart(product,quantity)">Agregar</button>
+            </div>
+        </div>
+    </div>
+    <hr>
